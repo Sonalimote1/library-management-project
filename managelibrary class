@@ -1,0 +1,78 @@
+
+package libraryproject;
+
+import java.util.*;
+
+	public class Manage {
+
+
+		 Scanner sc=new Scanner(System.in);
+		String[] arr=new String[100];
+		String[] arr1=new String[100];
+		String[] arr2=new String[100];
+		
+		int size;
+		public static void main(String[] args) {
+			Manage obj3=new Manage();
+			obj3.manageDetail();
+		}
+		public void manageDetail() {
+				
+		
+				System.out.println("1.Issue Books \n 2.Return Books \n 3.Exit");
+	
+				int ch;
+				do { 
+					System.out.println("Enter your choice: ");
+					ch=sc.nextInt();
+					if(ch>3) { 
+						System.out.println("Please enter valid choice...! ");
+					}
+					
+					switch(ch) {
+					case 1:
+						issueBooks();
+						break;
+					
+					case 2:
+						returnBooks();
+						break;
+					
+					case 3:
+						System.out.println("exit");
+					}
+					
+					}while(ch<3);
+				
+		}		
+		
+		public void issueBooks() {
+			System.out.println("Enter the number of Books to borrow : ");
+			size=sc.nextInt();
+			
+				System.out.println("Enter Book name: ");
+				for(int i=0;i<size;i++) {    
+				    arr[i]=sc.next();
+				}
+	
+				System.out.println("Enter Book Issue Date: ");
+				for(int i=0;i<size;i++) {
+				    arr1[i]=sc.next();
+				}
+
+			}
+			public void returnBooks() {
+				System.out.println("Enter the number of Books to return: ");
+				size=sc.nextInt();
+				System.out.println("Enter Book name: ");
+				for(int i=0;i<size;i++) {    
+				    arr[i]=sc.next();
+				}
+				System.out.println("Enter Books Return Date ");
+				for(int i=0;i<size;i++) {
+				    arr2[i]=sc.next();}
+				    System.out.println("thank you visiting library");
+				    	
+		}
+		
+}
