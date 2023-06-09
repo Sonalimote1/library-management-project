@@ -1,0 +1,55 @@
+package libraryproject;
+import java.util.Scanner;
+public class Welcometolibrary extends Admin {
+	public static void main(String[] args) {
+		Welcometolibrary obj = new Welcometolibrary();
+		obj.welcomePage();
+		Admin obj1=new Admin();
+		obj1.adminPage();
+	}
+	
+	public void welcomePage() {
+		
+		int num;
+		String name=null,password=null,username,pass;
+		Scanner sc =new Scanner(System.in);
+		System.out.println("*****WELCOME TO LIBRARY MANAGEMENT PROJECT*****");
+       System.out.println(" 1.signup \n 2.login \n 3.exit  ");
+      do {
+    	  System.out.println("choose any above option:");
+    	  num = sc.nextInt();
+    	  switch(num) {
+    	  case 1:
+    		  System.out.println("**WELCOME TO SIGNUP PAGE**");
+    	  { System.out.println("enter the name");
+    		   name=sc.next();}
+    		  {System.out.println("create the password");
+    		  password=sc.next();}
+    		//  {System.out.println("enter mobile no");
+    	      // long a = sc.nextLong();}
+    	       System.out.println("signup successfully completed");
+    	       break;
+    	  case 2:
+    		  System.out.println("**WELCOME TO LOGIN PAGE**");
+    	  { System.out.println("enter the username");
+		  username=sc.next();}
+    	  { System.out.println("enter created the password");
+		   pass=sc.next();}
+		  if(name.equals(username) && password.equals(pass)) {
+			  System.out.println(" login successfully completed:welcome Admin");
+			  
+		  }else {
+			  System.out.println("username and password incorrect please try again");
+		  }
+		  break;
+    	  case 3:
+    		  System.out.println("exit");
+    		  break;
+    	  }
+    	  }while(num<3);
+    	  
+      }
+      
+	
+	}
+
