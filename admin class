@@ -1,0 +1,47 @@
+package libraryproject;
+import java.util.*;
+public class Admin extends Student  {
+	public static void main(String[] args) {
+		Admin obj=new Admin();
+		obj.adminPage();
+	}
+	public void adminPage() {
+		int no;
+	
+		Scanner sc = new Scanner(System.in);
+		System.out.println("*****ADMIN PAGE*****");
+	System.out.println("1.student record \n 2.book record \n 3.manage book \n 4.exit");
+	do {
+		
+		System.out.println("enter any option");
+		 no = sc.nextInt();
+		switch(no){
+		case 1:
+			System.out.println("***STUDENT PAGE***");
+			Student obj = new Student();
+			obj.studentDetail();
+			break;
+		case 2:
+			System.out.println("***BOOK PAGE***");
+		Book obj1=new Book();
+		obj1.bookDetail();
+		break;
+		case 3:
+			System.out.println("***MANAGE BOOK PAGE");
+		Manage obj3=new Manage();
+		obj3.manageDetail();
+		case 4:
+			System.exit(no);
+		
+		}
+	}while(no<5);
+	}
+	
+	
+
+	
+	
+	
+	
+	}
+
