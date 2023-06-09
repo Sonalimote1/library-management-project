@@ -1,0 +1,60 @@
+package libraryproject;
+import java.util.*;
+public class Book{ //extends Manage{
+	public static void main(String[] args) {
+		Book obj1=new Book();
+		obj1.bookDetail();
+	}
+	
+	String[] ar1=new String[100];
+	//String [] ar2=new String[100];
+	int size;
+	static Scanner sc=new Scanner(System.in);
+  void bookDetail() {
+	  System.out.println("1.add book \n 2.display all book \n 3.exit");
+      int n;
+	  do {
+    	  System.out.println("enter the choice");
+    	  n=sc.nextInt();
+    	  if(n>3) {
+    		  System.out.println("plz enter valid choice");
+    	  }else {
+    		  switch(n) {
+    		  case 1:
+    			  addBook();
+    			  break;
+    		  case 2:
+    			  displayBook();
+    			  break;
+    		  case 3:
+    			  System.out.println("exit");
+    			  break;
+    		  }
+    	  }
+    	  
+      }while(n<3);
+  
+  }
+  public void addBook() {
+	  System.out.println("enter no of books to be add");
+	   size =sc.nextInt();
+	  System.out.println("enter book name ");
+	  for(int i=0;i<size;i++) {
+		  ar1[i]=sc.next();
+	  }
+	  
+System.out.println("books added successfully");
+	  
+  }
+  
+  public void displayBook() {
+	  System.out.println(" Book name ");
+	  for(int i=0;i<size;i++) {
+		 System.out.println(ar1[i]);
+	  }
+	 /* System.out.println("book auther name");
+	  for(int j=0;j<size;j++) {
+		  System.out.println(ar2[j]+" ");
+	  }*/
+  }
+}
